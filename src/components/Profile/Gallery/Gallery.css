@@ -1,0 +1,27 @@
+.Gallery {
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  grid-template-areas:
+    "... ... up up up up ..."
+    "... navigationbar foto foto foto foto ..."
+    "... navigationbar foto foto foto foto ..."
+    "... navigationbar foto foto foto foto ...";
+  grid-template-columns: 1fr repeat(5, 200px) 1fr;
+  grid-template-rows: 40px 230px 200px 6fr;
+  grid-gap: 2px;
+}
+
+.Gallery_foto {
+  grid-area: foto;
+  
+}
+
+.Gallery_foto img {
+    width: 100%;
+    height: 100%;
+    max-width: 195px;
+    max-height: 195px;
+    object-fit: cover;
+    padding: 2px;
+}

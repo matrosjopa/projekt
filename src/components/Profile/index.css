@@ -1,0 +1,71 @@
+.About {
+  border-radius: 7px;
+  grid-area: about;
+  background-color: rgb(218, 199, 199);
+  box-shadow: 0px 0px 20px 0px rgba(15, 15, 15, 0.2);
+}
+
+.Avatar {
+  text-align: center;
+  grid-area: avatar;
+  background-color: rgb(210, 243, 241);
+  border-radius: 7px;
+}
+.Gallery_profile {
+  text-align: center;
+  grid-area: gallery_profile;
+  background-color: rgb(51, 133, 129);
+  border-radius: 7px;
+}
+
+.Up {
+  grid-area: up;
+  background-color: rgb(13, 226, 216);
+  border-radius: 7px;
+}
+
+.NavigationBar {
+  grid-area: navigationbar;
+  background-color: rgb(232, 243, 243);
+  border-radius: 7px;
+}
+
+.Wall {
+  grid-area: wall;
+  background-color: rgb(211, 241, 240);
+  border-radius: 7px;
+}
+
+.Profile {
+  height: 100vh;
+  display: grid;
+  grid-template-areas:
+    "... ... up up ..."
+    "... navigationbar avatar about ..."
+    "... navigationbar gallery_profile gallery_profile ..."
+    "... navigationbar wall wall ...";
+  grid-template-columns: 1fr 200px 200px 600px 1fr;
+  grid-template-rows: 40px 230px 200px 6fr;
+  grid-gap: 2px;
+}
+
+.profile-btn {
+  padding: 2px 50px;
+  /* background-color: #417cef; */
+  border: 0;
+  font-size: 18px;
+  border-radius: 3px;
+  font-family: Oxygen, sans-serif;
+  background-color: rgba(15, 15, 15, 0.03);
+  margin-top: 3px;
+  transition: background-color 0.3s ease-out;
+  cursor: pointer;
+  width: 160px;
+  margin: 1 auto;
+}
+
+.profile-btn:hover,
+.profile-btn:focus {
+  background-color: rgb(160, 207, 204);
+  color: white;
+}

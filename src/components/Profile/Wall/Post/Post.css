@@ -1,0 +1,25 @@
+.Avatar_post img {
+    float: left;
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    padding-top: 15px;
+    padding-left: 15px;
+}
+
+.Post {
+    box-shadow: 5px 5px 0 rgb(252, 252, 252) inset, -5px -5px 0 rgb(255, 255, 255) inset;
+    float: right;
+    width: 100%;
+    min-height: 150px;
+    max-height:200px;
+}
+
+.post_area {
+    background-color: rgb(234, 247, 247);
+    
+}
+
+.post_text {
+    
+}
