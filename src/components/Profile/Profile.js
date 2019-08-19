@@ -9,6 +9,8 @@ import { Wall } from './Wall';
 import { Up } from './Header';
 import { About } from './About'
 
+
+
 export class Profile extends React.Component {
     constructor(props) {
         super(props);

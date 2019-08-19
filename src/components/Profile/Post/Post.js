@@ -1,7 +1,19 @@
 import React from 'react';
 import './Post.css'
 
+
+
+
 export class Post extends React.Component {
+  constructor(props) {
+  super(props)
+  this.state = {
+    title: "",
+    text: "",
+    user: ""
+  };
+}
+
   render() {
     return (
       <div className="Post">
@@ -10,15 +22,9 @@ export class Post extends React.Component {
         </div>
         <div
         className="post_text">
-        <h2>Autor:</h2>
-        <input
-          name="post"
-          className="post_area"
-          type="text"
-          placeholder="Your message"
-        >
-        </input>
-        <button>Add</button>
+        <h2>Autor: {this.props.user}</h2>
+        <h2> {this.props.title}</h2>
+        <div> {this.props.text}</div>
         </div>
       </div>
     );

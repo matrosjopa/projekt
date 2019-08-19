@@ -40,28 +40,24 @@
   height: 100vh;
   display: grid;
   grid-template-areas:
-    "... ... up up ..."
-    "... navigationbar avatar about ..."
-    "... navigationbar gallery_profile gallery_profile ..."
-    "... navigationbar wall wall ...";
-  grid-template-columns: 1fr 200px 200px 600px 1fr;
+    "... ... up up up up ..."
+    "... navigationbar avatar about about about..."
+    "... navigationbar gallery_profile gallery_profile gallery_profile gallery_profile ..."
+    "... navigationbar wall wall wall wall ...";
+  grid-template-columns: 1fr repeat(5, 200px) 1fr;
   grid-template-rows: 40px 230px 200px 6fr;
   grid-gap: 2px;
 }
 
 .profile-btn {
-  padding: 2px 50px;
-  /* background-color: #417cef; */
-  border: 0;
-  font-size: 18px;
+  text-decoration: none;
+  background-color: #abcfae;
+  padding: 3px 3px;
   border-radius: 3px;
-  font-family: Oxygen, sans-serif;
-  background-color: rgba(15, 15, 15, 0.03);
-  margin-top: 3px;
-  transition: background-color 0.3s ease-out;
-  cursor: pointer;
-  width: 160px;
-  margin: 1 auto;
+  display: inline-table;
+  width: 120px;
+  margin: 2px;
+  text-align: -webkit-center;
 }
 
 .profile-btn:hover,

@@ -7,17 +7,28 @@ import { RegisterBox } from './components/RegisterBox'
 import { Profile } from './components/Profile'
 import { Gallery } from './components/Profile/Gallery'
 import { Friends } from './components/Profile/Friends'
+import { Chat } from './components/Profile/Chat'
+import ApolloClient from "apollo-boost";
+import { ApolloProvider, ApolloHooksProvider } from "@apollo/react-hooks";
+
+export const client = new ApolloClient({
+  uri: `https://api.graph.cool/simple/v1/ciyz901en4j590185wkmexyex`
+});
+
+
+
 
 class App extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {};
+    this.state = {
+      
+    };
   }
-
-
 
   render() {
     return (
+
       <div>
           <div>
             <Switch>
@@ -26,15 +37,23 @@ class App extends React.Component {
               <Route path="/profile" component={Profile} />
               <Route path="/gallery" component={Gallery} />
               <Route path="/friends" component={Friends} />
+              <Route path="/chat" component={Chat} />
             </Switch>
           </div>
         </div>
-      
+
     );
   }
 }
 
+
+
 ReactDOM.render((
+  <ApolloProvider client={ client } >
   <BrowserRouter>
     <App />
-  </BrowserRouter>), document.getElementById("root"));
+  </BrowserRouter>
+  </ApolloProvider>
+  )
+  
+  , document.getElementById("root"));

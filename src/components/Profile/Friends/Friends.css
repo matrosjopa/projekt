@@ -1,13 +1,13 @@
 .Friends {
-    height: 100vh;
+  height: 100vh;
   display: -ms-grid;
   display: grid;
   grid-template-areas:
-    "... ... up   ..."
-    "... navigationbar friend  ..."
-    "... navigationbar ... ..."
-    "... navigationbar ... ...";
-  grid-template-columns: 1fr 200px 600px 1fr;
+    "... ... up up up up ..."
+    "... navigationbar friend friend friend friend ..."
+    "... navigationbar friend friend friend friend ..."
+    "... navigationbar friend friend friend friend ...";
+  grid-template-columns: 1fr repeat(5, 200px) 1fr;
   grid-template-rows: 40px 230px 200px 6fr;
   grid-gap: 2px;
 }

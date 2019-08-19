@@ -11,34 +11,28 @@ export class NavigationBar extends React.Component {
     return (
       <div className="NavigationBar">
         <ul>
-          <button
+          <Link to="/profile"
             type="button"
             className="profile-btn">
-            <Link to="/profile">
-              Home
+            Home
             </Link>
-          </button>
-          <button
+          <Link to="/gallery"
             type="button"
             className="profile-btn">
-            <Link to="/gallery">
               Gallery
             </Link>
-          </button>
-          <button
+          <Link
+            to="/friends"
             type="button"
             className="profile-btn">
-            <Link to="/friends">
-              Friends
+            Friends
             </Link>
-          </button>
-          <button
+          <Link
+            to="/chat"
             type="button"
             className="profile-btn">
-            <Link to="/signin">
-              Home
+            Chat
             </Link>
-          </button>
         </ul>
       </div>
     );

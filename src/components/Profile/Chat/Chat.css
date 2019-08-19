@@ -1,0 +1,46 @@
+.Chat {
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  grid-template-areas:
+    "... ... up up up up ..."
+    "... navigationbar chat_list chat_message chat_message chat_message ..."
+    "... navigationbar chat_list chat_message chat_message chat_message ..."
+    "... navigationbar chat_list chat_message chat_message chat_message ...";
+  grid-template-columns: 1fr repeat(5, 200px) 1fr;
+  grid-template-rows: 40px 230px 200px 6fr;
+  grid-gap: 2px;
+}
+
+.chat_message {
+  grid-area: chat_message;
+  background-color: #bedbc1;
+  border-radius: 7px;
+  text-align: start;
+  padding-top: 5px;
+  padding-left: 5px;
+}
+
+.chat_list {
+  grid-area: chat_list;
+  background-color: #b9dfbd;
+  border-radius: 7px;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.btn_chat {
+  text-decoration: none;
+  background-color: #abcfae;
+  padding: 5px 50px;
+  border-radius: 3px;
+  display: inline-table;
+  width: 50px;
+  margin: 2px;
+}
+
+.btn_chat:hover,
+.brn_chat:focus {
+  background-color: rgb(160, 207, 204);
+  color: white;
+}
